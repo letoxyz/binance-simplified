@@ -1,5 +1,6 @@
 import * as React from 'react';
 import ReactDOM from 'react-dom';
+import './global.css';
 
 import {App} from './components';
 
@@ -14,10 +15,15 @@ if (isPermitted) {
   extensionHost.setAttribute('id', 'leto-extension');
   body.appendChild(extensionHost);
 
-  extensionHost.attachShadow({mode: 'open'});
+  // extensionHost.attachShadow({mode: 'open'});
 
-  if (extensionHost && extensionHost.shadowRoot) {
-    ReactDOM.render(<App />, extensionHost.shadowRoot);
+  if (extensionHost) {
+    ReactDOM.render(
+      <div className="fixed left-0 top-0 w-full h-full">
+        <App />
+      </div>,
+      extensionHost
+    );
   }
 }
 
