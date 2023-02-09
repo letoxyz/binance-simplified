@@ -19,7 +19,7 @@ if (isPermitted) {
 
   if (extensionHost) {
     ReactDOM.render(
-      <div className="fixed left-0 top-0 w-full h-full">
+      <div className="fixed left-0 top-0 w-full h-full z-[1000]">
         <App />
       </div>,
       extensionHost
