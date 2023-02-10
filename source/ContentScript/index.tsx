@@ -6,6 +6,7 @@ import {App} from './components';
 
 const domain = window.location;
 
+// Because of AdBlock we need to-do it manually
 const isBinance = domain.host === 'www.binance.com';
 const isPermitted = isBinance;
 
