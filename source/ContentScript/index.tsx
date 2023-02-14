@@ -10,8 +10,11 @@ const domain = window.location;
 const isBinance = domain.host === 'www.binance.com';
 const isPermitted = isBinance;
 
+const body = document.getElementsByTagName('body')[0];
+const html = document.getElementsByTagName('html')[0];
+
 if (isPermitted) {
-  const body = document.getElementsByTagName('body')[0];
+  html.style.background = '#000;';
   const extensionHost = document.createElement('div');
   extensionHost.setAttribute('id', 'leto-extension');
   body.appendChild(extensionHost);
