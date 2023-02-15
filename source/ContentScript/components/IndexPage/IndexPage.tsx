@@ -1,19 +1,20 @@
 import * as React from 'react';
+import {getImage} from '../../helpers';
 
-// @ts-ignore
-const binanceLogo = chrome.runtime.getURL('assets/img/binance.svg');
-const wave = chrome.runtime.getURL('assets/img/wave.svg');
-const leto = chrome.runtime.getURL('assets/img/leto.svg');
-const github = chrome.runtime.getURL('assets/img/github.svg');
+const binanceLogo = getImage('assets/img/binance.svg');
+const wave = getImage('assets/img/wave.svg');
+const letoLogo = getImage('assets/img/letoLogo.svg');
+const leto = getImage('assets/img/leto.svg');
+const github = getImage('assets/img/github.svg');
 
 const IndexPage: React.FC = () => {
   const [isVisible, setVisible] = React.useState(true);
 
-  const onDefault = () => {
+  const onDefault = (): void => {
     setVisible(false);
   };
 
-  const onClick = () => {
+  const onClick = (): void => {
     window.history.pushState(
       null,
       'Leto | Simplified Binance',
@@ -60,9 +61,12 @@ const IndexPage: React.FC = () => {
             </button>
           </div>
 
-          <div>
+          <div className="m-auto">
             {/* Leto */}
-            <img className="m-auto" src={leto} alt="leto" />
+            <div className="flex gap-2">
+              <img src={letoLogo} alt="leto" />
+              <img src={leto} alt="leto" />
+            </div>
           </div>
         </div>
       </main>

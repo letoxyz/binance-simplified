@@ -30,5 +30,3 @@ if (isPermitted) {
     );
   }
 }
-
-export {};

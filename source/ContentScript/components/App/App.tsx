@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {IndexPage} from '../Index/IndexPage';
+import {IndexPage} from '../IndexPage';
 import {InfoPage} from '../Info';
 
 const App: React.FC = () => {
