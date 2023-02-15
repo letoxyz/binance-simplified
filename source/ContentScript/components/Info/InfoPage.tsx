@@ -19,7 +19,6 @@ const InfoPage: React.FC = () => {
 
     if (el) {
       el.click();
-      window.history.go(0);
     }
   };
 
@@ -72,8 +71,8 @@ const InfoPage: React.FC = () => {
             {typeof balance === 'string' ? `$${balance}` : 'Loading...'}
           </div>
           <div className="flex gap-[35px] items-center justify-center">
-            <div
-              onClick={buttonClickById('dashboard_top_deposit')}
+            <a
+              href="/en/my/wallet/account/main/withdrawal/crypto/BTC"
               className="flex gap-[7px] flex-col cursor-pointer items-center"
             >
               <button
@@ -83,9 +82,10 @@ const InfoPage: React.FC = () => {
                 <img src={arrowTop} alt="arrow" />
               </button>
               <div>Send</div>
-            </div>
-            <div
-              onClick={buttonClickById('dashboard_top_withdrawal')}
+            </a>
+            <a
+              href="/en/my/wallet/account/main/deposit/fiat/"
+              // onClick={buttonClickById('dashboard_top_deposit')}
               className="flex gap-[7px] flex-col cursor-pointer items-center"
             >
               <button
@@ -95,9 +95,10 @@ const InfoPage: React.FC = () => {
                 <img src={arrowBottom} alt="arrow" />
               </button>
               Recieve
-            </div>
-            <div
-              onClick={buttonClickById('dashboard_top_buy-crypto')}
+            </a>
+            <a
+              href="/en/buy-sell-crypto"
+              // onClick={buttonClickById('dashboard_top_buy-crypto')}
               className="flex gap-[7px] flex-col cursor-pointer items-center"
             >
               <button
@@ -107,7 +108,7 @@ const InfoPage: React.FC = () => {
                 <img src={plus} alt="arrow" />
               </button>
               Buy crypto
-            </div>
+            </a>
           </div>
         </div>
       </main>
