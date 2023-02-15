@@ -69,7 +69,7 @@ const IndexPage: React.FC = () => {
       </main>
       <footer className="w-full flex justify-end p-[22px] text-white/[0.48]">
         <a
-          href="https://github.com/letoxyz"
+          href="https://github.com/letoxyz/binance-simplified"
           target="_blank"
           className="flex gap-2"
           rel="noreferrer"
