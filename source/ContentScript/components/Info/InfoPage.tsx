@@ -1,5 +1,7 @@
 import * as React from 'react';
 import {getImage} from '../../helpers';
+import {useAppStore} from '../../store';
+import {getBalance} from './helpers';
 
 const github = getImage('assets/img/github.svg');
 const binance = getImage('assets/img/binance.svg');
@@ -9,30 +11,8 @@ const arrowTop = getImage('assets/img/arrow-top.svg');
 const arrowBottom = getImage('assets/img/arrow-bottom.svg');
 const plus = getImage('assets/img/plus.svg');
 
-const getBalanceNode = () => {
-  // eslint-disable-next-line no-useless-escape, prettier/prettier
-  return document?.querySelector('#balance-text')?.parentElement?.parentElement?.childNodes[1]
-};
-
-const getBalance = (): Promise<any> => {
-  return new Promise((resolve) => {
-    const id = setInterval(() => {
-      const balanceNode = getBalanceNode();
-
-      if (balanceNode) {
-        const balance = balanceNode.textContent?.replace(' ≈ $', '');
-
-        if (!Number.isNaN(Number(balance))) {
-          clearInterval(id);
-          resolve(balance);
-        }
-      }
-    }, 350);
-  });
-};
-
 const InfoPage: React.FC = () => {
-  const [isVisible, setVisible] = React.useState(true);
+  const {setAppVisible} = useAppStore((store) => store.actions);
   const [balance, setBalance] = React.useState<null | string>(null);
   const buttonClickById = (id: string) => (): void => {
     const el = document.getElementById(id);
@@ -43,11 +23,11 @@ const InfoPage: React.FC = () => {
     }
   };
 
-  const backToBinance = () => {
-    setVisible(false);
+  const backToBinance = (): void => {
+    setAppVisible(false);
   };
 
-  const fetchBalance = async () => {
+  const fetchBalance = async (): Promise<void> => {
     const fetchedBalance = (await getBalance()) || 0;
 
     setBalance(fetchedBalance);
@@ -56,10 +36,6 @@ const InfoPage: React.FC = () => {
   React.useEffect(() => {
     fetchBalance();
   }, []);
-
-  if (!isVisible) {
-    return null;
-  }
 
   return (
     <section className="bg-[#000] w-full h-full text-white flex flex-col">

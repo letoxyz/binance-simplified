@@ -1,22 +1,15 @@
 import * as React from 'react';
-import {IndexPage} from '../IndexPage';
-import {InfoPage} from '../Info';
+import {useAppStore} from '../../store';
+import {Router} from './Router';
 
 const App: React.FC = () => {
-  const href = window.location.pathname;
+  const isAppVisible = useAppStore((state) => state.isAppVisible);
 
-  const isIndexPage = new RegExp('^/(ru|en)$').test(href);
-  const isInfoPage = new RegExp('^/(ru|en)/my/dashboard$').test(href);
-
-  if (isIndexPage) {
-    return <IndexPage />;
+  if (!isAppVisible) {
+    return null;
   }
 
-  if (isInfoPage) {
-    return <InfoPage />;
-  }
-
-  return null;
+  return <Router />;
 };
 
 export {App};

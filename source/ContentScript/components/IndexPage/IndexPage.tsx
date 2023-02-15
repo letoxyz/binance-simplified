@@ -1,5 +1,6 @@
 import * as React from 'react';
 import {getImage} from '../../helpers';
+import {useAppStore} from '../../store';
 
 const binanceLogo = getImage('assets/img/binance.svg');
 const wave = getImage('assets/img/wave.svg');
@@ -8,10 +9,10 @@ const leto = getImage('assets/img/leto.svg');
 const github = getImage('assets/img/github.svg');
 
 const IndexPage: React.FC = () => {
-  const [isVisible, setVisible] = React.useState(true);
+  const {setAppVisible} = useAppStore((store) => store.actions);
 
   const onDefault = (): void => {
-    setVisible(false);
+    setAppVisible(false);
   };
 
   const onClick = (): void => {
@@ -22,10 +23,6 @@ const IndexPage: React.FC = () => {
     );
     window.history.go(0);
   };
-
-  if (!isVisible) {
-    return null;
-  }
 
   return (
     <section className="bg-[#000] w-full h-full text-white flex flex-col">

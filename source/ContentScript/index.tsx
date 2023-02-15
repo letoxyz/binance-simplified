@@ -22,11 +22,6 @@ if (isPermitted) {
   // extensionHost.attachShadow({mode: 'open'});
 
   if (extensionHost) {
-    ReactDOM.render(
-      <div className="fixed left-0 top-0 w-full h-full z-[1000]">
-        <App />
-      </div>,
-      extensionHost
-    );
+    ReactDOM.render(<App />, extensionHost);
   }
 }
