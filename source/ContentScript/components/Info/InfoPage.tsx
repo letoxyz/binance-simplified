@@ -14,13 +14,6 @@ const plus = getImage('assets/img/plus.svg');
 const InfoPage: React.FC = () => {
   const {setAppVisible} = useAppStore((store) => store.actions);
   const [balance, setBalance] = React.useState<null | string>(null);
-  const buttonClickById = (id: string) => (): void => {
-    const el = document.getElementById(id);
-
-    if (el) {
-      el.click();
-    }
-  };
 
   const backToBinance = (): void => {
     setAppVisible(false);
@@ -85,7 +78,6 @@ const InfoPage: React.FC = () => {
             </a>
             <a
               href="/en/my/wallet/account/main/deposit/fiat/"
-              // onClick={buttonClickById('dashboard_top_deposit')}
               className="flex gap-[7px] flex-col cursor-pointer items-center"
             >
               <button
@@ -98,7 +90,6 @@ const InfoPage: React.FC = () => {
             </a>
             <a
               href="/en/buy-sell-crypto"
-              // onClick={buttonClickById('dashboard_top_buy-crypto')}
               className="flex gap-[7px] flex-col cursor-pointer items-center"
             >
               <button
