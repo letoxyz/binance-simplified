@@ -3,12 +3,9 @@
 </div>
 <h1 align="center"><img src="https://github.com/letoxyz/binance-simplified/blob/main/.github/media/leto.svg" alt="🚀"  /> Leto - Binance Simplifier</h1>
 
----
-
 Binance Simplifier is a browser extension that simplifies the interface of Binance, a popular cryptocurrency exchange platform. <br />
 With this extension, you can access a streamlined version of Binance.com that displays only your balance and three main actions: Send Money, Receive Money, and Buy Crypto.
 
----
 
 ## 🚀 Features
 - Simplifies the Binance interface to only display balance and essential actions
