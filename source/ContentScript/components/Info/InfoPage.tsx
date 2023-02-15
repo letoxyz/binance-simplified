@@ -65,7 +65,7 @@ const InfoPage: React.FC = () => {
           </div>
           <div className="flex gap-[35px] items-center justify-center">
             <a
-              href="/en/my/wallet/account/main/withdrawal/crypto/BTC"
+              href="/en/my/wallet/account/main/withdrawal/crypto/USDT"
               className="flex gap-[7px] flex-col cursor-pointer items-center"
             >
               <button
@@ -77,7 +77,7 @@ const InfoPage: React.FC = () => {
               <div>Send</div>
             </a>
             <a
-              href="/en/my/wallet/account/main/deposit/fiat/"
+              href="/en/my/wallet/account/main/deposit/crypto/USDT"
               className="flex gap-[7px] flex-col cursor-pointer items-center"
             >
               <button
