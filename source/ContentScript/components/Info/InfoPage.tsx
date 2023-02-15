@@ -32,16 +32,19 @@ const getBalance = (): Promise<any> => {
 };
 
 const InfoPage: React.FC = () => {
+  const [isVisible, setVisible] = React.useState(true);
   const [balance, setBalance] = React.useState<null | string>(null);
   const buttonClickById = (id: string) => (): void => {
     const el = document.getElementById(id);
 
-    console.log('id', id, el);
-
     if (el) {
-      // setExtensionOpen(false);
       el.click();
+      window.history.go(0);
     }
+  };
+
+  const backToBinance = () => {
+    setVisible(false);
   };
 
   const fetchBalance = async () => {
@@ -54,6 +57,10 @@ const InfoPage: React.FC = () => {
     fetchBalance();
   }, []);
 
+  if (!isVisible) {
+    return null;
+  }
+
   return (
     <section className="bg-[#000] w-full h-full text-white flex flex-col">
       <header className="w-full h-[64px] relative flex items-center justify-center">
@@ -62,7 +69,11 @@ const InfoPage: React.FC = () => {
           <img className="m-auto mt-[5px]" src={leto} alt="Leto" />
         </div>
         <nav className="absolute right-0 top-[calc(50%-30px)] flex gap-2 items-center justify-center p-[15px]">
-          <button type="button" className="bg-white/[0.08] p-[10px] rounded-lg">
+          <button
+            onClick={backToBinance}
+            type="button"
+            className="bg-white/[0.08] p-[10px] rounded-lg"
+          >
             Back to Binance.com
           </button>
           <a
