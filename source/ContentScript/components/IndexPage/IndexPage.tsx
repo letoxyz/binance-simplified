@@ -35,7 +35,7 @@ const IndexPage: React.FC = () => {
 
           <div className="text-center gap-[37px] flex">
             <button type="button" onClick={onDefault}>
-              <div className="cursor-pointer p-[38px] flex flex-col gap-2 text-center border-t-white/10 border-t from-white/[0.08] to-white/[0.06] bg-gradient-to-b rounded-2xl hover:from-white/[0.12] hover:to-white/[0.08] transition-all">
+              <div className="w-[320px] cursor-pointer p-[38px] flex flex-col gap-2 text-center border-t-white/10 border-t from-white/[0.08] to-white/[0.06] bg-gradient-to-b rounded-2xl hover:from-white/[0.12] hover:to-white/[0.08] transition-all">
                 <div className="text-[32px]">Basic</div>
                 <div className="text-white/50">
                   Suitable for investments <br />
@@ -47,7 +47,7 @@ const IndexPage: React.FC = () => {
             <img src={wave} alt="" />
 
             <button type="button" onClick={onClick}>
-              <div className="cursor-pointer p-[38px] flex flex-col gap-2 text-center border-t-white/10 border-t from-white/[0.08] to-white/[0.06] bg-gradient-to-b rounded-2xl hover:from-white/[0.12] hover:to-white/[0.08] transition-all">
+              <div className="w-[320px] cursor-pointer p-[38px] flex flex-col gap-2 text-center border-t-white/10 border-t from-white/[0.08] to-white/[0.06] bg-gradient-to-b rounded-2xl hover:from-white/[0.12] hover:to-white/[0.08] transition-all">
                 <div className="text-[32px]">Simplified</div>
                 <div className="text-white/50">
                   More suitable
