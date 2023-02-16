@@ -32,10 +32,12 @@ const InfoPage: React.FC = () => {
   return (
     <section className="bg-[#000] w-full h-full text-white flex flex-col">
       <header className="w-full h-[64px] relative flex items-center justify-center">
-        <div className="text-center pt-[6px]">
-          <div>simplified by</div>
-          <img className="m-auto mt-[5px]" src={leto} alt="Leto" />
-        </div>
+        <a href="http://leto.xyz" target="_blank" rel="noreferrer">
+          <div className="text-center pt-[6px]">
+            <div>simplified by</div>
+            <img className="m-auto mt-[5px]" src={leto} alt="Leto" />
+          </div>
+        </a>
         <nav className="absolute right-0 top-[calc(50%-30px)] flex gap-2 items-center justify-center p-[15px]">
           <button
             onClick={backToBinance}
