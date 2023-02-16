@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "Leto Simplify",
-  "version": "0.0.0",
+  "version": "1.0.0",
 
   "icons": {
     "16": "assets/icons/favicon.ico",
@@ -11,7 +11,7 @@
     "512": "assets/icons/icon512.png"
   },
   "description": "Simplify your Binance experience with Leto",
-  "homepage_url": "https://github.com/letoxyz",
+  "homepage_url": "https://github.com/letoxyz/binance-simplified",
   "short_name": "Leto",
 
   "permissions": [
@@ -33,7 +33,6 @@
     }
   },
 
-  "__chrome__minimum_chrome_version": "49",
   "__opera__minimum_opera_version": "36",
 
   "__chrome|opera__options_page": "options.html",

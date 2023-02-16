@@ -1,6 +1,6 @@
 {
   "name": "web-extension-starter",
-  "version": "2.0.0",
+  "version": "1.0.0",
   "description": "Web extension starter using react and typescript",
   "private": true,
   "repository": "https://github.com/letoxyz/binance-simplified.git",
