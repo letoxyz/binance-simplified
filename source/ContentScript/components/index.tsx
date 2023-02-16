@@ -1,2 +1,3 @@
 export * from './App';
-export * from './Info';
+export * from './InfoPage';
+export * from './IndexPage';

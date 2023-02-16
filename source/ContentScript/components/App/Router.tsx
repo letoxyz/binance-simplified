@@ -2,7 +2,7 @@ import * as React from 'react';
 import {Wrapper} from './Wrapper';
 
 import {IndexPage} from '../IndexPage';
-import {InfoPage} from '../Info';
+import {InfoPage} from '../InfoPage';
 
 const Router: React.FC = () => {
   const href = window.location.pathname;
