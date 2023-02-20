@@ -9,6 +9,7 @@ const leto = getImage('assets/img/leto.svg');
 const letoLogo = getImage('assets/img/letoLogo.svg');
 const arrowTop = getImage('assets/img/arrow-top.svg');
 const arrowBottom = getImage('assets/img/arrow-bottom.svg');
+const arrowSwap = getImage('assets/img/arrow-swap.svg');
 const plus = getImage('assets/img/plus.svg');
 
 const InfoPage: React.FC = () => {
@@ -101,6 +102,18 @@ const InfoPage: React.FC = () => {
                 <img src={plus} alt="arrow" />
               </button>
               Buy crypto
+            </a>
+            <a
+              href="https://p2p.binance.com/en/trade/sell/USDT"
+              className="flex gap-[7px] flex-col cursor-pointer items-center"
+            >
+              <button
+                type="button"
+                className="w-[64px] h-[64px] flex justify-center items-center bg-gradient-to-b from-white/[0.12] to-white/[0.08] active:from-white/[0.06] active:to-white/[0.08] rounded-full"
+              >
+                <img src={arrowSwap} alt="swap" />
+              </button>
+              P2P
             </a>
           </div>
         </div>
